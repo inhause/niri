@@ -1,0 +1,37 @@
+layout {
+  gaps 16
+  center-focused-column "never"
+}
+window-rule {
+  // Rounded corners
+  geometry-corner-radius 20
+  clip-to-geometry true
+}
+
+switch-events {
+  lid-close { spawn "noctalia" "msg" "session" "lock-and-suspend"; }
+}
+
+// Floating Noctalia settings window
+window-rule {
+  match app-id="dev.noctalia.Noctalia"
+  open-floating true
+  default-column-width { fixed 1080; }
+  default-window-height { fixed 920; }
+}
+
+layer-rule {
+  match namespace="^noctalia-backdrop"
+  place-within-backdrop true
+}
+
+blur {
+  passes 3
+  offset 3
+  noise 0.03
+  saturation 1.7
+}
+
+debug {
+  honor-xdg-activation-with-invalid-serial
+}

@@ -1,0 +1,94 @@
+binds {
+  // Shell (Noctalia)
+  Mod+D { spawn-sh "noctalia msg panel-toggle launcher"; }
+  Mod+Grave { spawn-sh "noctalia msg panel-toggle control-center"; }
+  Mod+Comma { spawn-sh "noctalia msg settings-toggle"; }
+  XF86AudioRaiseVolume { spawn-sh "noctalia msg volume-up"; }
+  XF86AudioLowerVolume { spawn-sh "noctalia msg volume-down"; }
+  XF86AudioMute { spawn-sh "noctalia msg volume-mute"; }
+  XF86MonBrightnessUp { spawn-sh "noctalia msg brightness-up"; }
+  XF86MonBrightnessDown { spawn-sh "noctalia msg brightness-down"; }
+
+  // Misc
+  Super+Tab repeat=false { toggle-overview; }
+  Super+Shift+Tab { toggle-column-tabbed-display; }
+  Super+Q repeat=false { close-window; }
+  Super+V { toggle-window-floating; }
+  Super+Shift+L { spawn-sh "noctalia msg session lock"; }
+  Super+Shift+M { quit; }
+
+  // Apps
+  Super+Return { spawn "ghostty"; }
+  Super+C { spawn "firefox"; }
+  Super+I { spawn "vesktop"; }
+  Super+E { spawn "nautilus"; }
+  Super+Shift+E { spawn-sh "ghostty -e yazi"; }
+
+  // Window Navigation
+  Alt+A { focus-column-left; }
+  Alt+D { focus-column-right; }
+  Alt+W { focus-window-up; }
+  Alt+S { focus-window-down; }
+  Super+Left { focus-column-left; }
+  Super+Right { focus-column-right; }
+  Super+Up { focus-window-up; }
+  Super+Down { focus-window-down; }
+  Alt+Shift+A { move-column-left; }
+  Alt+Shift+D { move-column-right; }
+  Alt+Shift+W { move-window-up; }
+  Alt+Shift+S { move-window-down; }
+  Super+Shift+Left { move-column-left; }
+  Super+Shift+Right { move-column-right; }
+  Super+Shift+Up { move-window-up; }
+  Super+Shift+Down { move-window-down; }
+  
+  // Workspace Navigation
+  Super+W { focus-workspace-up; }
+  Super+S { focus-workspace-down; }
+  Super+Page_Up { focus-workspace-up; }
+  Super+Page_Down { focus-workspace-down; }
+  // Move columns between workspaces
+  Super+Shift+W { move-column-to-workspace-up; }
+  Super+Shift+S { move-column-to-workspace-down; }
+  Super+Shift+Page_Up { move-column-to-workspace-up; }
+  Super+Shift+Page_Down { move-column-to-workspace-down; }
+  // Move workspaces themselves
+  Super+Ctrl+W { move-workspace-up; }
+  Super+Ctrl+S { move-workspace-down; }
+  Super+Ctrl+Page_Up { move-workspace-up; }
+  Super+Ctrl+Page_Down { move-workspace-down; }
+  
+  // Consume / Expel Windows
+  Super+BracketLeft { consume-or-expel-window-left; }
+  Super+BracketRight { consume-or-expel-window-right; }
+  Super+Semicolon { consume-window-into-column; }
+
+  // Direct Workspace Selection (1-9)
+  super+1 { focus-workspace 1; }
+  super+2 { focus-workspace 2; }
+  super+3 { focus-workspace 3; }
+  super+4 { focus-workspace 4; }
+  super+5 { focus-workspace 5; }
+
+  // Move Column to Workspace (1-9)
+  super+shift+1 { move-column-to-workspace 1; }
+  super+shift+2 { move-column-to-workspace 2; }
+  super+shift+3 { move-column-to-workspace 3; }
+  super+shift+4 { move-column-to-workspace 4; }
+  super+shift+5 { move-column-to-workspace 5; }
+
+  // Window Management Etc
+  Super+F { maximize-column; }
+  Alt+F { maximize-column; }
+  Super+Shift+F { fullscreen-window; }
+  Alt+Shift+F { fullscreen-window; }
+  Super+R { switch-preset-column-width; }
+  Alt+R { switch-preset-column-width; }
+  Super+Shift+r { switch-preset-window-height; }
+  
+  Super+Shift+X { screenshot; }
+  Super+Shift+P { spawn-sh "hyprpicker | wl-copy"; }
+  Ctrl+Print { screenshot-screen; }
+  Alt+Print { screenshot-window; }
+}
+
