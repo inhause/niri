@@ -3,6 +3,7 @@ binds {
   Mod+D { spawn-sh "noctalia msg panel-toggle launcher"; }
   Mod+Grave { spawn-sh "noctalia msg panel-toggle control-center"; }
   Mod+Comma { spawn-sh "noctalia msg settings-toggle"; }
+  Mod+Shift+U { spawn-sh "noctalia msg panel-toggle yuuto/arch-updater:panel"; }
   XF86AudioRaiseVolume { spawn-sh "noctalia msg volume-up"; }
   XF86AudioLowerVolume { spawn-sh "noctalia msg volume-down"; }
   XF86AudioMute { spawn-sh "noctalia msg volume-mute"; }
@@ -20,7 +21,7 @@ binds {
   // Apps
   Super+Return { spawn "ghostty"; }
   Super+C { spawn "firefox"; }
-  Super+I { spawn "vesktop"; }
+  Super+I { spawn "equicord"; }
   Super+E { spawn "nautilus"; }
   Super+Shift+E { spawn-sh "ghostty -e yazi"; }
 
@@ -41,7 +42,15 @@ binds {
   Super+Shift+Right { move-column-right; }
   Super+Shift+Up { move-window-up; }
   Super+Shift+Down { move-window-down; }
-  
+  Super+Minus { set-column-width "-10%"; }
+  Super+Equal { set-column-width "+10%"; }
+  Super+Shift+Minus { set-window-height "-10%"; }
+  Super+Shift+Equal { set-window-height "+10%"; }
+  Alt+Minus { set-column-width "-10%"; }
+  Alt+Equal { set-column-width "+10%"; }
+  Alt+Shift+Minus { set-window-height "-10%"; }
+  Alt+Shift+Equal { set-window-height "+10%"; }
+
   // Workspace Navigation
   Super+W { focus-workspace-up; }
   Super+S { focus-workspace-down; }
@@ -86,9 +95,9 @@ binds {
   Alt+R { switch-preset-column-width; }
   Super+Shift+r { switch-preset-window-height; }
   
-  Super+Shift+X { screenshot; }
   Super+Shift+P { spawn-sh "hyprpicker | wl-copy"; }
-  Ctrl+Print { screenshot-screen; }
-  Alt+Print { screenshot-window; }
+  Super+Print { screenshot; }
+  Super+Shift+Print { screenshot-screen; }
+  Super+Ctrl+Print { screenshot-window; }
 }
 

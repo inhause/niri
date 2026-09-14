@@ -2,7 +2,6 @@ include "~/.config/niri/inputs.kdl"
 include "~/.config/niri/outputs.kdl"
 include "~/.config/niri/comp.kdl"
 include "~/.config/niri/binds.kdl"
-include "~/.config/niri/noctalia.kdl"
 spawn-at-startup "noctalia"
 
 prefer-no-csd
@@ -13,4 +12,4 @@ hotkey-overlay {
 
   
 
-include "noctalia.kdl"
+

@@ -2,8 +2,8 @@ input {
   touchpad {
     tap
     natural-scroll
-    accel-speed 0.15
-    dwt
+    accel-speed 0.2
+    // dwt
   }
   mouse {}
   trackpoint {}
