@@ -20,6 +20,7 @@ binds {
 
   // Apps
   Super+Return { spawn "ghostty"; }
+  Super+Shift+Return { spawn "ghostty" "--class=com.mitchellh.ghostty.float"; } 
   Super+C { spawn "firefox"; }
   Super+I { spawn "equicord"; }
   Super+E { spawn "nautilus"; }
